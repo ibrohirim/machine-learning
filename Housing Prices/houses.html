@@ -1,0 +1,101 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module houses</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>houses</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/home/ibrahim/Documents/cs-490r/assignments/HousePrices/houses.py">/home/ibrahim/Documents/cs-490r/assignments/HousePrices/houses.py</a></font></td></tr></table>
+    <p></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="numpy.html">numpy</a><br>
+</td><td width="25%" valign=top><a href="pandas.html">pandas</a><br>
+</td><td width="25%" valign=top></td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-buildModel"><strong>buildModel</strong></a>(result)</dt><dd><tt>Function:&nbsp;<a href="#-buildModel">buildModel</a>()<br>
+--------------------<br>
+&nbsp;<br>
+Takes&nbsp;the&nbsp;resulting&nbsp;dataFrame,&nbsp;creates&nbsp;x&nbsp;and&nbsp;y&nbsp;values&nbsp;to&nbsp;train&nbsp;the&nbsp;model,<br>
+creates&nbsp;the&nbsp;model,&nbsp;scores&nbsp;and&nbsp;fits&nbsp;it<br>
+&nbsp;<br>
+y:&nbsp;sale&nbsp;price&nbsp;of&nbsp;the&nbsp;houses&nbsp;as&nbsp;a&nbsp;matrix<br>
+x:&nbsp;the&nbsp;rest&nbsp;of&nbsp;the&nbsp;data&nbsp;with&nbsp;dropped&nbsp;sale&nbsp;price<br>
+&nbsp;<br>
+model:&nbsp;Random&nbsp;Forest&nbsp;Regressor&nbsp;model<br>
+&nbsp;<br>
+score:&nbsp;the&nbsp;cross_val_score&nbsp;of&nbsp;the&nbsp;model<br>
+&nbsp;<br>
+returns&nbsp;model</tt></dd></dl>
+ <dl><dt><a name="-cleanData"><strong>cleanData</strong></a>(data)</dt><dd><tt>Function:&nbsp;cleanData<br>
+--------------------<br>
+&nbsp;<br>
+Takes&nbsp;the&nbsp;loaded&nbsp;file,&nbsp;splits&nbsp;into&nbsp;categorical&nbsp;and&nbsp;numerical&nbsp;data.<br>
+Then&nbsp;fills&nbsp;in&nbsp;missing&nbsp;values,&nbsp;encodes&nbsp;categorical&nbsp;data&nbsp;and&nbsp;combines<br>
+the&nbsp;two&nbsp;dataframes&nbsp;back&nbsp;into&nbsp;one.<br>
+&nbsp;<br>
+cat:&nbsp;array&nbsp;of&nbsp;object&nbsp;columns<br>
+num:&nbsp;array&nbsp;of&nbsp;numerical&nbsp;columns<br>
+&nbsp;<br>
+dataCat:&nbsp;var&nbsp;for&nbsp;cat[]<br>
+dataNum:&nbsp;var&nbsp;for&nbsp;num[]<br>
+&nbsp;<br>
+le:&nbsp;label&nbsp;encoder<br>
+y:&nbsp;transformed&nbsp;values&nbsp;of&nbsp;dataCat&nbsp;categorical&nbsp;dataframe<br>
+&nbsp;<br>
+result:&nbsp;return&nbsp;value&nbsp;of&nbsp;concatenated&nbsp;dataFrames<br>
+&nbsp;<br>
+returns&nbsp;result</tt></dd></dl>
+ <dl><dt><a name="-loadData"><strong>loadData</strong></a>()</dt><dd><tt>Function:&nbsp;load_data()<br>
+---------------------<br>
+&nbsp;<br>
+Loads&nbsp;train&nbsp;data<br>
+data:&nbsp;train&nbsp;data<br>
+&nbsp;<br>
+returns&nbsp;data(loaded&nbsp;file&nbsp;var)</tt></dd></dl>
+ <dl><dt><a name="-loadTestData"><strong>loadTestData</strong></a>()</dt><dd><tt>Function:&nbsp;<a href="#-loadTestData">loadTestData</a>()<br>
+------------------------<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+Loads&nbsp;the&nbsp;test&nbsp;data&nbsp;and&nbsp;returns&nbsp;the&nbsp;dataframe<br>
+&nbsp;<br>
+test_data:&nbsp;loaded&nbsp;test&nbsp;data<br>
+&nbsp;<br>
+return&nbsp;test_data(loaded&nbsp;test&nbsp;data)</tt></dd></dl>
+ <dl><dt><a name="-main"><strong>main</strong></a>()</dt><dd><tt>Function:&nbsp;<a href="#-main">main</a>()<br>
+&nbsp;<br>
+Main&nbsp;function&nbsp;of&nbsp;the&nbsp;program&nbsp;to&nbsp;execute&nbsp;the&nbsp;code<br>
+&nbsp;<br>
+data:&nbsp;train&nbsp;data<br>
+result:&nbsp;cleaned&nbsp;train&nbsp;data<br>
+test_data:&nbsp;test&nbsp;data<br>
+&nbsp;<br>
+returns&nbsp;nothing</tt></dd></dl>
+ <dl><dt><a name="-predictAndPrint"><strong>predictAndPrint</strong></a>(test_data, model)</dt><dd><tt>Function:&nbsp;<a href="#-predictAndPrint">predictAndPrint</a>()<br>
+-----------------------<br>
+&nbsp;<br>
+Runs&nbsp;the&nbsp;test&nbsp;data&nbsp;through&nbsp;the&nbsp;model&nbsp;to&nbsp;produce&nbsp;prediction&nbsp;and&nbsp;creates&nbsp;submission<br>
+file<br>
+&nbsp;<br>
+test_y:&nbsp;id&nbsp;column&nbsp;of&nbsp;the&nbsp;dataframe<br>
+test_x:&nbsp;the&nbsp;rest&nbsp;of&nbsp;the&nbsp;data&nbsp;to&nbsp;predict<br>
+&nbsp;<br>
+final:&nbsp;the&nbsp;final&nbsp;prediction&nbsp;of&nbsp;the&nbsp;model<br>
+&nbsp;<br>
+sub:&nbsp;compiled&nbsp;information&nbsp;for&nbsp;submission<br>
+&nbsp;<br>
+returns&nbsp;nothing</tt></dd></dl>
+</td></tr></table>
+</body></html>

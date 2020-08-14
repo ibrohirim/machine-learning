@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module leaf</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>leaf</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/home/ibrahim/Documents/cs-490r/assignments/leaf.py">/home/ibrahim/Documents/cs-490r/assignments/leaf.py</a></font></td></tr></table>
+    <p></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="numpy.html">numpy</a><br>
+</td><td width="25%" valign=top><a href="pandas.html">pandas</a><br>
+</td><td width="25%" valign=top></td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-build_model"><strong>build_model</strong></a>(x, y)</dt><dd><tt>Function:&nbsp;build_model<br>
+---------------------<br>
+&nbsp;<br>
+Builds&nbsp;the&nbsp;model&nbsp;and&nbsp;trains&nbsp;it<br>
+&nbsp;<br>
+model:&nbsp;the&nbsp;RandomForest&nbsp;model&nbsp;that&nbsp;we'll&nbsp;train<br>
+score:&nbsp;the&nbsp;cross&nbsp;validation&nbsp;score&nbsp;of&nbsp;the&nbsp;k-folds<br>
+&nbsp;<br>
+returns&nbsp;model</tt></dd></dl>
+ <dl><dt><a name="-define_x"><strong>define_x</strong></a>(leaf)</dt><dd><tt>Function:&nbsp;define_x<br>
+------------------<br>
+&nbsp;<br>
+Takes&nbsp;in&nbsp;the&nbsp;loaded&nbsp;file&nbsp;and&nbsp;defines&nbsp;the&nbsp;data&nbsp;to&nbsp;be&nbsp;used&nbsp;as&nbsp;training&nbsp;x<br>
+&nbsp;<br>
+x:&nbsp;training&nbsp;data<br>
+&nbsp;<br>
+returns&nbsp;x</tt></dd></dl>
+ <dl><dt><a name="-define_y"><strong>define_y</strong></a>(leaf)</dt><dd><tt>Function:&nbsp;define_y<br>
+------------------<br>
+&nbsp;<br>
+Takes&nbsp;in&nbsp;the&nbsp;loaded&nbsp;file&nbsp;and&nbsp;defines&nbsp;the&nbsp;target&nbsp;data&nbsp;y<br>
+&nbsp;<br>
+y:&nbsp;target&nbsp;data<br>
+&nbsp;<br>
+return&nbsp;y</tt></dd></dl>
+ <dl><dt><a name="-load_data"><strong>load_data</strong></a>()</dt><dd><tt>Function:&nbsp;load_data<br>
+-------------------<br>
+&nbsp;<br>
+Loads&nbsp;train&nbsp;data<br>
+&nbsp;<br>
+leaf:&nbsp;the&nbsp;loaded&nbsp;file<br>
+&nbsp;<br>
+returns&nbsp;the&nbsp;loaded&nbsp;file</tt></dd></dl>
+ <dl><dt><a name="-load_predict_save"><strong>load_predict_save</strong></a>(model, le)</dt><dd><tt>Function:&nbsp;load_predict<br>
+------------------------<br>
+&nbsp;<br>
+Loads&nbsp;the&nbsp;test&nbsp;data&nbsp;and&nbsp;makes&nbsp;a&nbsp;prediction&nbsp;and&nbsp;saves&nbsp;the&nbsp;output&nbsp;file&nbsp;to&nbsp;csv<br>
+&nbsp;<br>
+test_leaf:&nbsp;the&nbsp;test&nbsp;data&nbsp;to&nbsp;be&nbsp;run&nbsp;through&nbsp;the&nbsp;file<br>
+test_ids:&nbsp;dataframe&nbsp;of&nbsp;the&nbsp;loaded&nbsp;test&nbsp;data&nbsp;as&nbsp;a&nbsp;matrix<br>
+predict:&nbsp;the&nbsp;prediction&nbsp;of&nbsp;the&nbsp;test&nbsp;data&nbsp;of&nbsp;the&nbsp;model<br>
+sub:&nbsp;dataframe&nbsp;to&nbsp;be&nbsp;saved&nbsp;to&nbsp;csv</tt></dd></dl>
+ <dl><dt><a name="-main"><strong>main</strong></a>()</dt><dd><tt>Function:&nbsp;main<br>
+--------------<br>
+main&nbsp;function&nbsp;to&nbsp;execute&nbsp;the&nbsp;code<br>
+&nbsp;<br>
+leaf:&nbsp;the&nbsp;loaded&nbsp;data&nbsp;file<br>
+y:&nbsp;target&nbsp;of&nbsp;date&nbsp;file<br>
+x:&nbsp;date&nbsp;of&nbsp;datafile<br>
+le:&nbsp;classes&nbsp;of&nbsp;datafile<br>
+model:&nbsp;the&nbsp;model&nbsp;to&nbsp;predict<br>
+score:&nbsp;score&nbsp;of&nbsp;the&nbsp;predicted&nbsp;model</tt></dd></dl>
+ <dl><dt><a name="-transform"><strong>transform</strong></a>(y)</dt><dd><tt>Function:&nbsp;transform<br>
+-------------------<br>
+&nbsp;<br>
+Transforms&nbsp;the&nbsp;data<br>
+&nbsp;<br>
+le:&nbsp;loaded&nbsp;LabelEncoder&nbsp;object<br>
+y:&nbsp;the&nbsp;transformed&nbsp;target&nbsp;area<br>
+&nbsp;<br>
+returns&nbsp;y</tt></dd></dl>
+</td></tr></table>
+</body></html>
