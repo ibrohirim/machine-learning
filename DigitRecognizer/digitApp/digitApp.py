@@ -3,8 +3,6 @@ from streamlit_drawable_canvas import st_canvas
 import numpy as np
 from keras.models import load_model
 from tensorflow import convert_to_tensor
-import tensorflow as tf
-import pandas as pd
 import math
 import matplotlib.pyplot as plt
 
@@ -33,7 +31,7 @@ def main():
             st.image(image)
             image = np.array(image)
             image = image.reshape(1, 28, 28, 1)
-            image = tf.convert_to_tensor(image)
+            image = convert_to_tensor(image)
         return image
 
     def loadModel():
@@ -74,7 +72,6 @@ def main():
         if np.mean(image_data) != 63.75:
             data  = convertImage(image_data)
             pred = prediction(model, data)
-            print(pred)
             xt = ('0', '1', '2', '3', '4', '5', '6', '7', '8','9')
             y_pos = np.arange(len(xt))
             plt.bar(y_pos, height=pred[0], align='center', color=['blue', 'red', 'orange', 'green', 'black', 'cyan', 'yellow', 'purple', 'magenta', 'pink'])
